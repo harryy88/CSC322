@@ -13,7 +13,7 @@ void printIntAry(int[]);
 void printIntPtrAry(int* []);
 
 int main(int argc, char *argv[]){
-
+  //NOT YET COMPLETE 
   intAry fiveRandomNumber;
   intPtAry fiveRandomIntPtrs;
   printf(""); 
