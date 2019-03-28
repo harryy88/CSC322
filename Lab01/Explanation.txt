@@ -1,0 +1,21 @@
+wc `grep -l int *` VERSUS grep -l int * | wc.
+
+wc 'grep -l int *' 
+This command displays the number of words, lines, and character count for each line of output that is found by grep (* wildcard).
+EX: 
+$  wc `grep -l int *`
+grep: FirstDir: Is a directory
+grep: perl5: Is a directory
+grep: public_html: Is a directory
+ 19  74 461 LookingForInts.sh
+ 19  74 456 LookingForInts.sh~
+ 38 148 917 total
+
+
+Whereas with grep -l int * | wc the results in the output of grep are being piped into the wc where it then displays the appropriate count for the output of the grep command (ie output as a whole, not for each command)
+EX:
+$ grep -l int * | wc
+grep: FirstDir: Is a directory
+grep: perl5: Is a directory
+grep: public_html: Is a directory
+      2       2      37

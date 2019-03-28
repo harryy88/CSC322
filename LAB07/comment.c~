@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+ 
+#define MAX_STRING 1000
+typedef char String[MAX_STRING];
+
+//-----------------------------------------------------------------------------
+int main(void) {
+
+  String code;
+  int len; 
+  printf("Enter program code here: ");
+  scanf("%[^\n]",code);
+  
+  len = strlen(code);
+  for(int i = 0; i < len; i++){
+    printf("%c", code[i]); 
+  }
+  printf("\n Comments are: \n");
+
+  int open = 0;
+  for(int j = 0; j < len - 1; j++){
+    char c = code[j];
+    if(code[j] == '/' && code[j+1] == '*'){
+      open = 1;
+      continue; 
+    }
+    
+    else if(code[j] == '*' && code[j+1] == '/'){
+      open = 0; 
+    }
+    if(open == 1){
+      printf("%c", code[j]); 
+    }
+   
+
+  }
+
+  printf("\nAll done :)\n"); 
+  return(EXIT_SUCCESS);
+}

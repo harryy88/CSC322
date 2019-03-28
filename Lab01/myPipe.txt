@@ -1,0 +1,7 @@
+
+
+COMMAND TO PRINT NUMBER OF FILES/SUB-DIR USING PIPE:
+ls -A | wc -l
+
+
+

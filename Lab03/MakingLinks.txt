@@ -1,0 +1,21 @@
+
+
+
+mkdir LabTask3
+
+
+cd LabTask3
+mkdir Originals
+
+
+cd Originals
+touch HardStuff
+touch SoftStuff
+
+cd
+mkdir Links
+
+
+cd Links
+ln ~/LabTask3/Originals/HardStuff LinkToHardStuff
+ln -s ~/LabTask3/Originals/SoftStuff RelativeToSoftStuff

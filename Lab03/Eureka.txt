@@ -1,0 +1,14 @@
+
+
+#where the email addresses file would be 
+cd ~/../../../var/spool/mail
+
+
+#printer config file 
+
+cd ~/../../../etc/cups/printers.conf
+
+
+#Pluggable Auth Module (PAM DIR)
+
+cd ~/../../../etc/pam.d

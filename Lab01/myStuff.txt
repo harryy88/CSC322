@@ -1,0 +1,13 @@
+
+
+USER ID			id -u		=> uid=20680
+
+GROUP ID		id -g		=> gid=15
+
+NAMES OF ALL GROUPS 	groups		=> user (kmem after lee)
+
+ABS PATH OF TCSH SHELL	which tcsh	=> /usr/bin/tcsh
+
+ABS PATH OF HOME DIR	$HOME		=>/home/ugrad/hgro322
+
+PATH ENV VARIABLES	$PATH	=>	/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/						bin:/sbin:/bin:/usr/games:/usr/local/games:/home/					ugrad/hgro322/bin

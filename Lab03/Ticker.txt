@@ -1,0 +1,25 @@
+
+
+
+./Ticker 5 & ./Ticker 7
+
+
+^Z
+
+jobs
+
+
+bg %N
+
+
+fg %N
+
+^Z
+
+
+kill %N
+
+
+kill %N
+
+N=ID OF APPROP TICKER PROCESS :)

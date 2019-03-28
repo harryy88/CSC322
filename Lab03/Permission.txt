@@ -1,0 +1,12 @@
+
+
+
+
+#Can change permission using numerical codes: 
+
+chmod 764 IveGotRights
+umask 013
+
+#can also change permission of rwx for ugo: 
+
+chmod u+x FILE.sh
