@@ -25,6 +25,7 @@ int main(int argc, char *argv[]){
   printf("***************BEFORE (IE UNSORTED RANDOM ARRAY)*********************\n"); 
   printIntAry(fiveRandomNumber); 
   printf("\n"); 
+
   printIntPtrAry(fiveRandomIntPtrs); 
   
   printf("***************AFTER (IE SORTED RANDOM ARRAY)*************************\n"); 
@@ -110,7 +111,6 @@ void printIntAry(int intAry[]){
 }
 
 void printIntPtrAry(int *intPtrAry[]){
-  //*intPtrAry[1] = rand(); 
   printf("Numbers in Integer Pointer Array:\n"); 
   for(int i = 0; i < 5; i++)
     printf("Item at index %d is %d \n", i, *intPtrAry[i]); 
