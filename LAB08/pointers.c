@@ -11,6 +11,8 @@ void seedInt(int[]);
 void seedIntPt(int* []); 
 void printIntAry(int[]); 
 void printIntPtrAry(int* []);
+void bubbleSortInts(int[]); 
+void bubbleSortIntPtr(int* []); 
 
 int main(int argc, char *argv[]){
   //NOT YET COMPLETE 
@@ -24,9 +26,32 @@ int main(int argc, char *argv[]){
   printf("dd\n\n"); 
   printIntPtrAry(fiveRandomIntPtrs); 
   
- 
+  bubbleSortInts(fiveRandomNumber); 
+  printf("\n\nSorted Numbers After:\n"); 
+  printIntAry(fiveRandomNumber); 
  
   return(EXIT_SUCCESS);  
+
+}
+
+void bubbleSortIntPtr(int *Numbers[]){
+
+
+
+}
+
+void bubbleSortInts(int Numbers[]){
+  int temp; 
+  for(int i = 0; i < 5 - 1; i++){
+    for(int j = 0; j < 5 - i - 1; j++){
+      if(Numbers[j] > Numbers[j+1]){   //elements w/out using [] notation
+	temp = *(Numbers+j); 
+	*(Numbers+j) = *(Numbers+j+1); 
+	*(Numbers+j+1) = temp; 
+      }
+    }
+
+  }
 
 }
 
