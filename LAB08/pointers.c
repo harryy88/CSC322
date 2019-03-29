@@ -15,27 +15,40 @@ void bubbleSortInts(int[]);
 void bubbleSortIntPtr(int* []); 
 
 int main(int argc, char *argv[]){
-  //NOT YET COMPLETE 
+  
   intAry fiveRandomNumber;
   intPtAry fiveRandomIntPtrs;
   printf(""); 
   seedIntPt(fiveRandomIntPtrs); 
   seedInt(fiveRandomNumber); 
+  
  
-  printIntAry(fiveRandomNumber); 
+  //printIntAry(fiveRandomNumber); 
   printf("dd\n\n"); 
   printIntPtrAry(fiveRandomIntPtrs); 
   
-  bubbleSortInts(fiveRandomNumber); 
+  //bubbleSortInts(fiveRandomNumber); 
   printf("\n\nSorted Numbers After:\n"); 
-  printIntAry(fiveRandomNumber); 
- 
+  //printIntAry(fiveRandomNumber);
+  bubbleSortIntPtr(fiveRandomIntPtrs); 
+
+  printIntPtrAry(fiveRandomIntPtrs); 
   return(EXIT_SUCCESS);  
 
 }
 
 void bubbleSortIntPtr(int *Numbers[]){
-
+  for(int i = 0; i < 5 - 1; i++){
+    for(int j = 0; j < 5 - i - 1; j++){
+      if(*Numbers[j] > *Numbers[j+1]){
+	int *temp;
+	++temp; 
+	temp = Numbers[j]; 
+	Numbers[j] = Numbers[j+1]; 
+	Numbers[j+1] = temp; 
+      }
+    }
+  }
 
 
 }
@@ -65,7 +78,7 @@ void seedInt(int intAry[]){
 } 
 
 void seedIntPt(int *intPtrAry[]){
-  //srand(time(NULL)); 
+  //srand(time(0)); 
   for(int i = 0; i < 5; i++){
     int *xP; 
     int x = rand();
@@ -88,9 +101,9 @@ void printIntAry(int intAry[]){
 }
 
 void printIntPtrAry(int *intPtrAry[]){
-  *intPtrAry[1] = rand(); 
+  //*intPtrAry[1] = rand(); 
   printf("Numbers in Integer Pointer Array:\n"); 
   for(int i = 0; i < 5; i++)
-    printf("Item at index %d is %d\n", i, *intPtrAry[i]); 
+    printf("Item at index %d is %d at Location: %d \n", i, *intPtrAry[i], intPtrAry[i]); 
 
 }
